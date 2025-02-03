@@ -3,15 +3,20 @@ import { useState } from "react";
 export default function Login() {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredPassword, setEnteredPassword] = useState("");
-  function handleSubmit() {
+  function handleSubmit(event) {
+    event.preventDefault();
     console.log("Submitted");
     console.log(enteredEmail);
+    console.log(enteredPassword);
   }
-  function handelEmailChange(event) {
+  function handleEmailChange(event) {
     setEnteredEmail(event.target.value);
   }
+  function handlePasswordChange(event) {
+    setEnteredPassword(event.target.value);
+  }
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <h2>Login</h2>
 
       <div className="control-row">
@@ -21,14 +26,20 @@ export default function Login() {
             id="email"
             type="email"
             name="email"
-            onChange={handelEmailChange}
+            onChange={handleEmailChange}
             value={enteredEmail}
           />
         </div>
 
         <div className="control no-margin">
           <label htmlFor="password">Password</label>
-          <input id="password" type="password" name="password" />
+          <input
+            id="password"
+            type="password"
+            name="password"
+            onChange={handlePasswordChange}
+            value={enteredPassword}
+          />
         </div>
       </div>
 
