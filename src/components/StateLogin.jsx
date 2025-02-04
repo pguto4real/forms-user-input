@@ -28,6 +28,11 @@ export default function StateLogin() {
       ...prevValues,
       [identifier]: value,
     }));
+
+    setDidEdit((prevValues) => ({
+      ...prevValues,
+      [identifier]: false,
+    }));
   }
   function handleInputBlur(identifier) {
     setDidEdit((prevValues) => ({
