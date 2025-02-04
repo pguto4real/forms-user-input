@@ -7,7 +7,8 @@ export default function StateLogin() {
     email: "",
     password: "",
   });
-  const emailIsInvalid = enteredValues.email!=='' && !enteredValues.email.includes('@');
+  const emailIsInvalid =
+    enteredValues.email !== "" && !enteredValues.email.includes("@");
   function handleSubmit(event) {
     event.preventDefault();
     console.log("Submitted");
