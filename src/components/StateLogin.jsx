@@ -12,8 +12,9 @@ export default function StateLogin() {
     email: false,
     password: false,
   });
-  const emailIsInvalid =
-    didEdit.email  && !enteredValues.email.includes("@") && enteredValues.email!=='';
+  const emailIsInvalid = didEdit.email && !enteredValues.email.includes("@");
+  // &&    enteredValues.email !== "";
+
   function handleSubmit(event) {
     event.preventDefault();
     console.log("Submitted");
