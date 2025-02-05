@@ -20,9 +20,9 @@ export default function StateLogin() {
     console.log("Submitted");
     console.log(enteredValues);
   }
-  function handleEmailChange(event) {
-    setEnteredEmail(event.target.value);
-  }
+  // function handleEmailChange(event) {
+  //   setEnteredEmail(event.target.value);
+  // }
   function handleInputChange(identifier, value) {
     setEnteredValues((prevValues) => ({
       ...prevValues,
