@@ -1,8 +1,6 @@
 import { useState } from "react";
 
 export default function StateLogin() {
-  // const [enteredEmail, setEnteredEmail] = useState("");
-  // const [enteredPassword, setEnteredPassword] = useState("");
   const [enteredValues, setEnteredValues] = useState({
     email: "",
     password: "",
@@ -20,9 +18,7 @@ export default function StateLogin() {
     console.log("Submitted");
     console.log(enteredValues);
   }
-  // function handleEmailChange(event) {
-  //   setEnteredEmail(event.target.value);
-  // }
+
   function handleInputChange(identifier, value) {
     setEnteredValues((prevValues) => ({
       ...prevValues,
@@ -40,9 +36,7 @@ export default function StateLogin() {
       [identifier]: true,
     }));
   }
-  // function handlePasswordChange(identifier, event) {
-  //   setEnteredPassword(event.target.value);
-  // }
+
   return (
     <form onSubmit={handleSubmit}>
       <h2>Login</h2>
