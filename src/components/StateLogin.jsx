@@ -3,10 +3,10 @@ import { useState } from "react";
 export default function StateLogin() {
   // const [enteredEmail, setEnteredEmail] = useState("");
   // const [enteredPassword, setEnteredPassword] = useState("");
-  // const [enteredValues, setEnteredValues] = useState({
-  //   email: "",
-  //   password: "",
-  // });
+  const [enteredValues, setEnteredValues] = useState({
+    email: "",
+    password: "",
+  });
 
   const [didEdit, setDidEdit] = useState({
     email: false,
