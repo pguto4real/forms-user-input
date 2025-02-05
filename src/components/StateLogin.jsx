@@ -40,9 +40,9 @@ export default function StateLogin() {
       [identifier]: true,
     }));
   }
-  function handlePasswordChange(identifier, event) {
-    setEnteredPassword(event.target.value);
-  }
+  // function handlePasswordChange(identifier, event) {
+  //   setEnteredPassword(event.target.value);
+  // }
   return (
     <form onSubmit={handleSubmit}>
       <h2>Login</h2>
