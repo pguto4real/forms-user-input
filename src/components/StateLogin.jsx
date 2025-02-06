@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Input from "./Input";
+import { isEmail } from "../util/validation";
 
 export default function StateLogin() {
   const [enteredValues, setEnteredValues] = useState({
@@ -11,7 +12,7 @@ export default function StateLogin() {
     email: false,
     password: false,
   });
-  const emailIsInvalid = didEdit.email && !enteredValues.email.includes("@");
+  const emailIsInvalid = didEdit.email && !isEmail(enteredValues.email);
   const passwordIsInvalid =
     didEdit.password && enteredValues.password.trim().length < 6;
   // &&    enteredValues.email !== "";
@@ -65,7 +66,6 @@ export default function StateLogin() {
           onChange={() => handleInputChange("password", event.target.value)}
           value={enteredValues.password}
         />
-        
       </div>
 
       <p className="form-actions">
