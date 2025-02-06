@@ -48,9 +48,18 @@ export default function StateLogin() {
           type={"email"}
           name={"email"}
           id={"email"}
-          error={emailIsInvalid}
+          error={emailIsInvalid && "Please enter a valid email address."}
           onBlur={() => handleInputBlur("email")}
           onChange={() => handleInputChange("email", event.target.value)}
+        />
+        <Input
+          label={"Password"}
+          type={"password"}
+          name={"password"}
+          id={"password"}
+          error={emailIsInvalid && "Please enter a valid password address."}
+          onBlur={() => handleInputBlur("password")}
+          onChange={() => handleInputChange("password", event.target.value)}
         />
         {/* <div className="control no-margin">
           <label htmlFor="email">Email</label>
