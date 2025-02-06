@@ -1,7 +1,7 @@
 import React from "react";
 
 const Input = ({ label, id,error,...props }) => {
-    console.log(error)
+   
   return (
     <div className="control no-margin">
       <label htmlFor="email">{label}</label>
