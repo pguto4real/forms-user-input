@@ -14,7 +14,7 @@ export default function Signup() {
 
       <div className="control">
         <label htmlFor="email">Email</label>
-        <input id="email" type="email" name="email" />
+        <input id="email" type="email" name="email" req/>
       </div>
 
       <div className="control-row">
