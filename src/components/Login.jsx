@@ -18,10 +18,10 @@ export default function Login() {
       setEmailIsInvalid(true);
       return;
     }
-
+    setEmailIsInvalid(true);
     console.log("Sending HTTP request");
 
-    // console.log(enteredEmail, enteredPassword);
+    console.log(enteredEmail, enteredPassword);
   }
 
   return (
