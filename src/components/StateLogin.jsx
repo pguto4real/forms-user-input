@@ -21,7 +21,6 @@ export default function StateLogin() {
     !hasMinLength(enteredValues.password, 6) &&
     !isNotEmpty(enteredValues.password);
 
-
   function handleSubmit(event) {
     event.preventDefault();
     console.log("Submitted");
