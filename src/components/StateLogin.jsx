@@ -16,23 +16,6 @@ export default function StateLogin() {
     handleInputChange: handlePasswordChange,
     hasError: passwordHasError,
   } = useInput("", (value) => isNotEmpty(value) && hasMinLength(value));
-  // const [enteredValues, setEnteredValues] = useState({
-  //   email: "",
-  //   password: "",
-  // });
-
-  // const [didEdit, setDidEdit] = useState({
-  //   email: false,
-  //   password: false,
-  // });
-  // const emailIsInvalid =
-  //   didEdit.email &&
-  //   !isEmail(enteredValues.email) &&
-  //   !isNotEmpty(enteredValues.email);
-  // const passwordIsInvalid =
-  //   didEdit.password &&
-  //   !hasMinLength(enteredValues.password, 6) &&
-  //   !isNotEmpty(enteredValues.password);
 
   function handleSubmit(event) {
     event.preventDefault();
