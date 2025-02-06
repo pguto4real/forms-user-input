@@ -27,23 +27,7 @@ export default function StateLogin() {
     console.log(enteredValues);
   }
 
-  function handleInputChange(identifier, value) {
-    setEnteredValues((prevValues) => ({
-      ...prevValues,
-      [identifier]: value,
-    }));
-
-    setDidEdit((prevValues) => ({
-      ...prevValues,
-      [identifier]: false,
-    }));
-  }
-  function handleInputBlur(identifier) {
-    setDidEdit((prevValues) => ({
-      ...prevValues,
-      [identifier]: true,
-    }));
-  }
+  
 
   return (
     <form onSubmit={handleSubmit}>
