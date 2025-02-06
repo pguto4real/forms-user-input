@@ -44,7 +44,7 @@ export default function Signup() {
       <div className="control-row">
         <div className="control">
           <label htmlFor="first-name">First Name</label>
-          <input type="text" id="first-name" name="first-name" />
+          <input type="text" id="first-name" name="first-name" required/>
         </div>
 
         <div className="control">
