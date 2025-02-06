@@ -49,7 +49,7 @@ export default function Signup() {
 
         <div className="control">
           <label htmlFor="last-name">Last Name</label>
-          <input type="text" id="last-name" name="last-name" />
+          <input type="text" id="last-name" name="last-name" required/>
         </div>
       </div>
 
